@@ -1,0 +1,13 @@
+*{ 
+  margin: 0px;
+  padding: 0px;
+}
+
+main{
+  display: flex;
+}
+
+section{
+  background-color: red;
+  border-radius: 15px;
+}
