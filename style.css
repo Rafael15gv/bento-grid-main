@@ -1,40 +1,65 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  font-family: "dm";
-  box-sizing: border-box;
-  /* font-weight: 900; */
+/* ============================= */
+/*        Global Styles          */
+/* ============================= */
+:root {
+  /* Colors */
+  --primary-color: hsl(256, 67%, 59%);
+  --secondary-color: hsl(39, 100%, 71%);
+  --light-color: hsl(31, 66%, 93%);
+  --white-color: hsl(0, 0%, 100%);
+  --background-color: whitesmoke;
+  --soft-purple: hsl(254, 88%, 90%);
+  
+  /* Fonts */
+  --font-main: "DM Sans", sans-serif;
+  --font-italic: "dm-italic";
 }
 
 @font-face {
-  font-family: "dm";
-  src: url(/assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans-VariableFont_opsz,wght.ttf");
 }
 
 @font-face {
   font-family: "dm-italic";
-  src: url(/assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+  src: url("/assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf");
 }
-/* ******************************************* */
+
+/* ============================= */
+/*        Reset & Global         */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  box-sizing: border-box;
+}
+
 body {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
 }
-/* ******************************************* */
-main {
+
+/* ============================= */
+/*        Grid Layout            */
+/* ============================= */
+.grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 10px;
   max-width: 1000px;
   max-height: 700px;
 }
 
-section {
+/* ============================= */
+/*        General Card Styles    */
+/* ============================= */
+.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +71,7 @@ h1, h2, h3, p {
   padding: 20px;
 }
 
-p{
+p {
   font-size: 18px;
 }
 
@@ -54,92 +79,73 @@ img {
   width: 200px;
   height: auto;
 }
-/* ******************************************* */
+
+/* ============================= */
+/*        Individual Cards       */
+/* ============================= */
 .card1 {
   grid-area: 1 / 1 / 3 / 2;
-  background-color: hsl(31, 66%, 93%);
+  background-color: var(--light-color);
   font-size: 1.3em;
 }
 
 .card1 span {
-  color: hsl(256, 67%, 59%);
-}
-/* ******************************************* */
-.card2 {
-  grid-area: 1 / 2 / 2 / 4;
-  background-color: hsl(256, 67%, 59%);
-  text-align: center;
-  color: hsl(0, 0%, 100%);
+  color: var(--primary-color);
 }
 
-.card2 h1{
+.card2 {
+  grid-area: 1 / 2 / 2 / 4;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-align: center;
+}
+
+.card2 h1 {
   font-size: 3em;
   font-weight: 400;
   padding-top: 40px;
 }
 
-section.card2{
-  /* background-color: red; */
-  justify-content: center;
-}
-
 .card2 span:first-child {
-  color: hsl(39, 100%, 71%);
+  color: var(--secondary-color);
 }
 
 .card2 span:last-child {
-  font-family: "dm-italic";
+  font-family: var(--font-italic);
 }
 
-.card2 p {
-  padding-top: 0px;
-  padding-bottom: 40px;
-}
-/* ******************************************* */
 .card3 {
   grid-area: 1 / 4 / 4 / 5;
-  background-color: hsl(254, 88%, 90%);
+  background-color: var(--soft-purple);
 }
 
-.card3 h3{
+.card3 h3 {
   font-size: 2em;
 }
 
-
-
-
-
-
-/* ******************************************* */
 .card4 {
   grid-area: 2 / 2 / 4 / 3;
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--white-color);
 }
-/* ******************************************* */
+
 .card5 {
   grid-area: 2 / 3 / 4 / 4;
-  background-color: hsl(39, 100%, 71%);
+  background-color: var(--secondary-color);
 }
-/* ******************************************* */
+
 .card6 {
   grid-area: 3 / 1 / 5 / 2;
-  background-color: hsl(39, 100%, 71%);
+  background-color: var(--secondary-color);
 }
-/* ******************************************* */
+
 .card7 {
   grid-area: 4 / 2 / 5 / 3;
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--white-color);
 }
-/* ******************************************* */
+
 .card8 {
   grid-area: 4 / 3 / 5 / 5;
-  background-color: hsl(256, 67%, 59%);
-}
-
-.card8 h2 {
-  color: hsl(0, 0%, 100%);
-}
-
-section.card8 {
+  background-color: var(--primary-color);
   flex-direction: row;
+  color: var(--white-color);
 }
