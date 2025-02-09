@@ -61,7 +61,6 @@ p{
 
 img {
   width: 200px;
-  /* height: 200px; */
 }
 /* ******************************************* */
 .card1 {
@@ -75,6 +74,7 @@ img {
   color: hsl(256, 67%, 59%);
   font-style: italic;
 }
+
 /* ******************************************* */
 .card2 {
   grid-area: 1 / 2 / 2 / 4;
@@ -161,10 +161,6 @@ margin-top: 20px;  margin-left: 100px;
   /* display: block; */
 }
 
-
-
-
-
 /* ******************************************* */
 .card7 {
   grid-area: 4 / 2 / 5 / 3;
@@ -181,9 +177,6 @@ margin-top: 20px;  margin-left: 100px;
   width: 150px;
   padding-bottom: 20px;
 }
-
-
-
 
 /* ******************************************* */
 section.card8 {
@@ -206,8 +199,6 @@ section.card8 {
   font-weight: 500;
 }
 
-
-
 @media (max-width:550px) {
   body{
     /* background-color: red; */
@@ -222,13 +213,10 @@ section.card8 {
   main {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
   }
 
   section{
     width: 345px;
-    /* height: 300px; */
   }
 
   h3{
@@ -236,8 +224,6 @@ section.card8 {
     padding: 0px;
     margin: 20px;
   }
-
- 
  
   .card1{
     order: 7;
@@ -284,8 +270,6 @@ section.card8 {
     margin: 0px;
     margin-bottom: 10px;
   }
-
-
   
   .card5{
     order: 3;
@@ -297,7 +281,6 @@ section.card8 {
   .card5 img{
     margin-left: 20px;
   }
-
 
   .card6{
     order: 8;
@@ -316,7 +299,6 @@ section.card8 {
     padding-left: 20px;
   }
 
-
   section.card8{
     flex-direction: column;
   }
@@ -329,15 +311,4 @@ section.card8 {
   .card8  h2{
     margin: 20px 40px;
   }
-
-
-
-
-
-
 }
-
-
-
-
-
